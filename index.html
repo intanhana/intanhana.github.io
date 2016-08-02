@@ -209,10 +209,16 @@
                 <div class="col-lg-12" id="map">
                     <script>
                       function initMap() {
+                        var myLatLng = {lat: -6.488595, lng: 111.042393};
                         var mapDiv = document.getElementById('map');
                         var map = new google.maps.Map(mapDiv, {
-                            center: {lat: 44.540, lng: -78.546},
-                            zoom: 8
+                            center: myLatLng,
+                            zoom: 4
+                        });
+                        var marker = new google.maps.Marker({
+                            position: myLatLng,
+                            map: map,
+                            title: 'Rumahe Intan'
                         });
                       }
                     </script>
